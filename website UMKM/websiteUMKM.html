@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bakmi Glodok</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/mie.png" alt="Logo Bakmi Glodok"> 
+    <h1>Bakmi Glodok</h1>
+    <p><b>Selamat datang di dunia kuliner lokal!</b></p>
+  </header>
+
+  <nav>
+    <a href="#1">Tentang Kami</a>
+    <a href="#2">Menu Andalan</a>
+    <a href="#3">Kontak</a>
+  </nav>
+
+  <section id="1">
+    <h2>Tentang Kami</h2>
+    <p>Kami adalah UMKM kuliner yang berkomitmen menyajikan hidangan lezat dengan bahan-bahan lokal terbaik.</p>
+  </section>
+
+  <section id="2">
+    <h2>Menu Andalan</h2>
+    <div class="product">
+      <img src="assets/bakmi original.jpg" alt="Produk 1">
+      <div>
+        <h3>Bakmi Original</h3>
+        <p style="text-align: justify;">Bakmi autentik dengan potongan ayam yang dimasak dengan bumbu spesial, dilengkapi dengan sawi dan kuah lezat yang menjadi salah satu menu andalan Bakmi Glodok.</p>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="assets/nasgor.jpg" alt="Produk 2">
+      <div>
+        <h3>Nasi Goreng Seafood</h3>
+        <p style="text-align: justify;">Nasi goreng dengan isian ayam, udang, telur, dan baso ikan. Dipercantik dengan potongan kecil wortel dan taburan daun bawang.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="3">
+    <h2>Kontak</h2>
+    <div class="contact">
+      <img src="assets/location.png" alt="Telepon Icon">
+      <p> Alamat: Jl. Elang No. 2 Tangerang, Banten</p>
+    </div>
+    <div class="contact">
+      <img src="assets/telepon.png" alt="Telepon Icon">
+      <p>Nomor Telepon: +62 123 456 789</p>
+    </div>
+    <div class="contact">
+      <img src="assets/wa.png" alt="Email Icon">
+      <p>Nomor WA: +62 123 456 789</p>
+    </div>
+    <div class="contact">
+      <img src="assets/email.png" alt="Email Icon">
+      <p>Alamat email: bakmiglodok@gmail.com</p>
+    </div>
+  </section> 
+  
+  <section>
+    <h2>Kirimkan Kami Pesan</h2>
+    <form id="contactForm" action="http://localhost/IT Developer Intern Test/website UMKM/submit_form.php" method="post">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" name="name" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="message">Pesan:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+  
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+  
+
+  <footer id="footer">
+    <p>&copy; 2024 Bakmi Glodok, All Rights reserved.</p>
+  </footer>
+
+  <script>
+    let lastScrollPosition = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      if (currentScrollPosition > lastScrollPosition) {
+        // Scroll ke bawah, sembunyikan footer
+        document.getElementById('footer').style.transform = 'translateY(100%)';
+      } else {
+        // Scroll ke atas, tampilkan kembali footer
+        document.getElementById('footer').style.transform = 'translateY(0)';
+      }
+
+      lastScrollPosition = currentScrollPosition;
+    });
+  </script>
+</body>
+</html>
